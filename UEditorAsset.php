@@ -7,7 +7,6 @@ use yii\web\View;
 
 class UEditorAsset extends AssetBundle
 {
-    public $sourcePath = '@app/widgets/ueditor/assets';
     public $js = [
         'js/ueditor.config.js',
         'js/ueditor.all.js',
@@ -16,4 +15,8 @@ class UEditorAsset extends AssetBundle
     public $jsOptions = [
         'position' =>View::POS_HEAD,
     ];
+    public function init()
+    {
+        $this->sourcePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'assets';
+    }
 }
