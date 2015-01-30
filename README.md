@@ -42,7 +42,7 @@ echo $form->field($model,'colum')->widget('kucha\ueditor\UEditor',[]);
 ```
 ### 配置相关
 
-#### 编辑器相关配置，请在`view` 中配置，参数为`jsOption`，比如定制菜单，编辑器大小等等，具体参数请查看[UEditor官网文档](http://fex-team.github.io/ueditor/)。
+##### 编辑器相关配置，请在`view` 中配置，参数为`jsOption`，比如定制菜单，编辑器大小等等，具体参数请查看[UEditor官网文档](http://fex-team.github.io/ueditor/)。
 
 简单实例:  
 ```php
@@ -66,7 +66,7 @@ echo $form->field($model,'colum')->widget('kucha\ueditor\UEditor',[]);
     ]);
 ```
 
-#### 文件上传相关配置，请在`controller`中配置，参数为`options`,例如文件上传路径等；更多参数请参照 [config.php](https://github.com/BigKuCha/yii2-ueditor-widget/blob/master/config.php) (跟UEditor提供的config.json一样)
+##### 文件上传相关配置，请在`controller`中配置，参数为`options`,例如文件上传路径等；更多参数请参照 [config.php](https://github.com/BigKuCha/yii2-ueditor-widget/blob/master/config.php) (跟UEditor提供的config.json一样)
 
 简单实例:  
 ```php
