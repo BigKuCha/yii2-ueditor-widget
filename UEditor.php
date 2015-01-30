@@ -7,6 +7,7 @@ namespace kucha\ueditor;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\View;
@@ -17,7 +18,7 @@ class UEditor extends InputWidget
     //配置选项，参阅Ueditor官网文档(定制菜单等)
     public $jsOptions = [];
 
-    //预设配置
+    //默认配置
     protected $_options;
 
     /**
@@ -25,8 +26,12 @@ class UEditor extends InputWidget
      */
     public function init()
     {
+        $this->id = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->id;
         $this->_options = [
             'serverUrl' => Url::to(['upload']),
+            'initialFrameWidth' => '100%',
+            'initialFrameHeight' => '400',
+            'lang' => strtolower(Yii::$app->language),
         ];
         $this->jsOptions = ArrayHelper::merge($this->_options, $this->jsOptions);
         parent::init();
@@ -36,9 +41,10 @@ class UEditor extends InputWidget
     {
         $this->registerClientScript();
         if ($this->hasModel()) {
-            $this->value = $this->model->getAttributes($this->attribute);
+            return Html::activeTextarea($this->model, $this->attribute, ['id' => $this->id]);
+        } else {
+            return Html::textarea($this->id, $this->value, ['id' => $this->id]);
         }
-        echo '<script id="' . $this->id . '" type="text/plain" style="width:1024px;height:500px;">' . $this->value . '</script>';
     }
 
     /**
