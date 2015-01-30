@@ -48,40 +48,40 @@ echo $form->field($model,'colum')->widget('kucha\ueditor\UEditor',[]);
 
 简单实例:  
 ```php
-	use \kucha\ueditor\UEditor;
-    echo UEditor::widget([
-        'jsOptions' => [
-            //编辑区域大小
-            'initialFrameHeight' => '200',
-            //定制菜单
-            'toolbars' => [
-                [
-                    'fullscreen', 'source', 'undo', 'redo', '|',
-                    'fontsize',
-                    'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'removeformat',
-                    'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
-                    'forecolor', 'backcolor', '|',
-                    'lineheight', '|',
-                    'indent', '|'
-                ],
-            ]
-    ]);
+use \kucha\ueditor\UEditor;
+echo UEditor::widget([
+    'jsOptions' => [
+        //编辑区域大小
+        'initialFrameHeight' => '200',
+        //定制菜单
+        'toolbars' => [
+            [
+                'fullscreen', 'source', 'undo', 'redo', '|',
+                'fontsize',
+                'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'removeformat',
+                'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
+                'forecolor', 'backcolor', '|',
+                'lineheight', '|',
+                'indent', '|'
+            ],
+        ]
+]);
 ```
 
 ##### 文件上传相关配置，请在`controller`中配置，参数为`options`,例如文件上传路径等；更多参数请参照 [config.php](https://github.com/BigKuCha/yii2-ueditor-widget/blob/master/config.php) (跟UEditor提供的config.json一样)
 
 简单实例:  
 ```php
-	public function actions()
-        {
-            return [
-                'upload' => [
-                    'class' => 'kucha\ueditor\UEditorAction',
-                    'config' => [
-                        "imageUrlPrefix"  => "http://www.baidu.com",//图片访问路径前缀
-                        "imagePathFormat" => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}" //上传保存路径
-                    ],
-                ]
-            ];
-        }
+public function actions()
+{
+    return [
+        'upload' => [
+            'class' => 'kucha\ueditor\UEditorAction',
+            'config' => [
+                "imageUrlPrefix"  => "http://www.baidu.com",//图片访问路径前缀
+                "imagePathFormat" => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}" //上传保存路径
+            ],
+        ]
+    ];
+}
 ```
