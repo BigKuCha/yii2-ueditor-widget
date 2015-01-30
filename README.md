@@ -68,7 +68,7 @@ echo UEditor::widget([
 ]);
 ```
 
-##### 文件上传相关配置，请在`controller`中配置，参数为`options`,例如文件上传路径等；更多参数请参照 [config.php](https://github.com/BigKuCha/yii2-ueditor-widget/blob/master/config.php) (跟UEditor提供的config.json一样)
+##### 文件上传相关配置，请在`controller`中配置，参数为`config`,例如文件上传路径等；更多参数请参照 [config.php](https://github.com/BigKuCha/yii2-ueditor-widget/blob/master/config.php) (跟UEditor提供的config.json一样)
 
 简单实例:  
 ```php
