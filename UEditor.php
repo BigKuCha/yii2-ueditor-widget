@@ -15,7 +15,7 @@ use yii\widgets\InputWidget;
 class UEditor extends InputWidget
 {
     //配置选项，参阅Ueditor官网文档(定制菜单等)
-    public $jsOptions;
+    public $jsOptions = [];
 
     //预设配置
     protected $_options;
