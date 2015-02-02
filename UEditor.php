@@ -16,7 +16,7 @@ use yii\widgets\InputWidget;
 class UEditor extends InputWidget
 {
     //配置选项，参阅Ueditor官网文档(定制菜单等)
-    public $jsOptions = [];
+    public $clientOptions = [];
 
     //默认配置
     protected $_options;
@@ -33,7 +33,7 @@ class UEditor extends InputWidget
             'initialFrameHeight' => '400',
             'lang' => strtolower(Yii::$app->language),
         ];
-        $this->jsOptions = ArrayHelper::merge($this->_options, $this->jsOptions);
+        $this->clientOptions = ArrayHelper::merge($this->_options, $this->clientOptions);
         parent::init();
     }
 
@@ -53,8 +53,8 @@ class UEditor extends InputWidget
     protected function registerClientScript()
     {
         UEditorAsset::register($this->view);
-        $jsonOptions = Json::encode($this->jsOptions);
-        $script = "UE.getEditor('" . $this->id . "', " . $jsonOptions . ")";
+        $clientOptions = Json::encode($this->clientOptions);
+        $script = "UE.getEditor('" . $this->id . "', " . $clientOptions . ")";
         $this->view->registerJs($script, View::POS_READY);
     }
 }

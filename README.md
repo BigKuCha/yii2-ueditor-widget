@@ -44,13 +44,13 @@ echo $form->field($model,'colum')->widget('kucha\ueditor\UEditor',[]);
 ```
 ### 配置相关
 
-##### 编辑器相关配置，请在`view` 中配置，参数为`jsOption`，比如定制菜单，编辑器大小等等，具体参数请查看[UEditor官网文档](http://fex-team.github.io/ueditor/)。
+##### 编辑器相关配置，请在`view` 中配置，参数为`clientOption`，比如定制菜单，编辑器大小等等，具体参数请查看[UEditor官网文档](http://fex-team.github.io/ueditor/)。
 
 简单实例:  
 ```php
 use \kucha\ueditor\UEditor;
 echo UEditor::widget([
-    'jsOptions' => [
+    'clientOption' => [
         //编辑区域大小
         'initialFrameHeight' => '200',
         //定制菜单
