@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * @link https://github.com/BigKuCha/yii2-ueditor-widget
  * @link http://ueditor.baidu.com/website/index.html
  */
 namespace kucha\ueditor;
