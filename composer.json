@@ -8,7 +8,7 @@
             "email": "nevermore1989@vip.qq.com"
         }
     ],
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
     "require": {},
     "autoload": {
         "psr-4": {
