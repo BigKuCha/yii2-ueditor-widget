@@ -1,6 +1,6 @@
 百度UEditor
 ===========
-
+[![Latest Stable Version](https://poser.pugx.org/kucha/ueditor/v/stable)](https://packagist.org/packages/kucha/ueditor) [![Total Downloads](https://poser.pugx.org/kucha/ueditor/downloads)](https://packagist.org/packages/kucha/ueditor) 
 ### 安装
 Either run
 
