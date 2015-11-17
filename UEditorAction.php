@@ -93,6 +93,7 @@ class UEditorAction extends Action
         switch (htmlspecialchars($_GET['action'])) {
             case 'uploadimage':
                 $config = array(
+                    "pathRoot" => ArrayHelper::getValue($this->config, "imageRoot", $_SERVER['DOCUMENT_ROOT']),
                     "pathFormat" => $this->config['imagePathFormat'],
                     "maxSize" => $this->config['imageMaxSize'],
                     "allowFiles" => $this->config['imageAllowFiles']
@@ -101,6 +102,7 @@ class UEditorAction extends Action
                 break;
             case 'uploadscrawl':
                 $config = array(
+                    "pathRoot" => ArrayHelper::getValue($this->config, "scrawlRoot", $_SERVER['DOCUMENT_ROOT']),
                     "pathFormat" => $this->config['scrawlPathFormat'],
                     "maxSize" => $this->config['scrawlMaxSize'],
                     "allowFiles" => $this->config['scrawlAllowFiles'],
@@ -111,6 +113,7 @@ class UEditorAction extends Action
                 break;
             case 'uploadvideo':
                 $config = array(
+                    "pathRoot" => ArrayHelper::getValue($this->config, "videoRoot", $_SERVER['DOCUMENT_ROOT']),
                     "pathFormat" => $this->config['videoPathFormat'],
                     "maxSize" => $this->config['videoMaxSize'],
                     "allowFiles" => $this->config['videoAllowFiles']
@@ -120,6 +123,7 @@ class UEditorAction extends Action
             case 'uploadfile':
             default:
                 $config = array(
+                    "pathRoot" => ArrayHelper::getValue($this->config, "fileRoot", $_SERVER['DOCUMENT_ROOT']),
                     "pathFormat" => $this->config['filePathFormat'],
                     "maxSize" => $this->config['fileMaxSize'],
                     "allowFiles" => $this->config['fileAllowFiles']
