@@ -1,6 +1,7 @@
 <?php
 namespace kucha\ueditor;
 
+use Yii;
 
 class Uploader
 {
@@ -296,13 +297,7 @@ class Uploader
      */
     private function getFilePath()
     {
-        $fullname = $this->fullName;
-
-        if (substr($fullname, 0, 1) != '/') {
-            $fullname = '/' . $fullname;
-        }
-
-        return $this->config['pathRoot'] . $fullname;
+        return Yii::getAlias($this->fullName);
     }
 
     /**
