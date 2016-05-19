@@ -22,14 +22,20 @@ class UEditor extends InputWidget
     //默认配置
     protected $_options;
 
+   //上传服务器路径
+   public $server;
     /**
      * @throws \yii\base\InvalidConfigException
      */
     public function init()
     {
+        if(!$this->server) {
+            $this->server = Url::to(['upload']);
+        }
+        
         $this->id = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->id;
         $this->_options = [
-            'serverUrl' => Url::to(['upload']),
+            'serverUrl' => $this->server,
             'initialFrameWidth' => '100%',
             'initialFrameHeight' => '400',
             'lang' => (strtolower(Yii::$app->language) == 'en-us') ? 'en' : 'zh-cn',
