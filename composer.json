@@ -9,7 +9,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "kucha/ueditor": "dev-bugfix"
+    },
     "autoload": {
         "psr-4": {
             "kucha\\ueditor\\": ""
