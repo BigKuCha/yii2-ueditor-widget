@@ -8,10 +8,8 @@
             "email": "nevermore1989@vip.qq.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {
-        "kucha/ueditor": "dev-bugfix"
-    },
+    "minimum-stability": "stable",
+    "require": {},
     "autoload": {
         "psr-4": {
             "kucha\\ueditor\\": ""
