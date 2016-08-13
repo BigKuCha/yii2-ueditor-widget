@@ -85,11 +85,9 @@ public function actions()
             'config' => [
                 "imageUrlPrefix"  => "http://www.baidu.com",//图片访问路径前缀
                 "imagePathFormat" => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}" //上传保存路径
+                "imageRoot" => Yii::getAlias("@webroot"),
             ],
         ]
     ];
 }
 ```
-
-####
-如果成功了，别忘了右上角点个star  (*^__^*)
