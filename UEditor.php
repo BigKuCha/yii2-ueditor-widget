@@ -60,7 +60,7 @@ class UEditor extends InputWidget
     {
         UEditorAsset::register($this->view);
         $clientOptions = Json::encode($this->clientOptions);
-        $script = "UE.getEditor('" . $this->id . "', " . $clientOptions . ")";
+        $script = "UE.getEditor('" . $this->id . "', " . $clientOptions . ");";
         $this->view->registerJs($script, View::POS_READY);
     }
 }
