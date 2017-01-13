@@ -4,15 +4,15 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "BigKuCha",
-            "email": "nevermore1989@vip.qq.com"
+            "name": "sheng",
+            "email": "yongsheng_li@foxmail.com"
         }
     ],
     "minimum-stability": "stable",
     "require": {},
     "autoload": {
         "psr-4": {
-            "kucha\\ueditor\\": ""
+            "sheng\\ueditor\\": ""
         }
     }
 }
