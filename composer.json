@@ -12,7 +12,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "sheng\\ueditor\\": ""
+            "kucha\\ueditor\\": ""
         }
     }
 }
