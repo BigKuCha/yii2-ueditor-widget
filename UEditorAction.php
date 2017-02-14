@@ -226,6 +226,7 @@ class UEditorAction extends Action
     {
         /* 上传配置 */
         $config = array(
+            "pathRoot" => ArrayHelper::getValue($this->config, "catcherRoot", $_SERVER['DOCUMENT_ROOT']),
             "pathFormat" => $this->config['catcherPathFormat'],
             "maxSize" => $this->config['catcherMaxSize'],
             "allowFiles" => $this->config['catcherAllowFiles'],
