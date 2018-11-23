@@ -5,6 +5,7 @@ namespace kucha\ueditor;
 use Yii;
 use yii\base\Action;
 use yii\helpers\ArrayHelper;
+use yii\web\Response;
 
 class UEditorAction extends Action
 {
@@ -27,7 +28,12 @@ class UEditorAction extends Action
 
     public function run()
     {
+        ob_start();
         $this->handleAction();
+        $content = ob_get_contents();
+        ob_clean();
+        Yii::$app->response->format = Response::FORMAT_RAW;
+        return $content;
     }
 
     /**
